@@ -1,0 +1,15 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="pincode_list_index_data_source" xsi:type="string">Cartgeek\PincodeImport\Model\ResourceModel\PincodeDataUpload\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Cartgeek\PincodeImport\Model\ResourceModel\PincodeDataUpload\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">pincode_data</argument>
+            <argument name="resourceModel" xsi:type="string">Cartgeek\PincodeImport\Model\ResourceModel\PincodeDataUpload</argument>
+        </arguments>
+    </virtualType>
+</config>
